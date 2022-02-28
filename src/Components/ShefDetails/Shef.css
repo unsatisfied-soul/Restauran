@@ -1,0 +1,11 @@
+.chefs-details{
+    grid-template-columns: repeat(4,1fr);
+}
+.chef-img img{
+    transition: 1s;
+    transform: rotate(-4deg);
+}
+.chef-container:hover .chef-img img{
+    transform: rotate(0deg);
+    transition: 1s;
+}

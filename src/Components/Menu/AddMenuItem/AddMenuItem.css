@@ -1,0 +1,18 @@
+.addMenu{
+    max-width: 650px;
+}
+.menu_input{
+    border: 1px solid rgb(255, 102, 0);
+    margin-bottom: 10px;
+    padding: 12px 10px;
+    outline: none;
+    border-radius: 5px;
+    color: rgb(255, 102, 0);
+    font-weight: bold;
+    font-size: 22px;
+}
+
+
+.addMenuBtn{
+    max-width: 200px;
+}
