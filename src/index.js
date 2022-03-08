@@ -1,13 +1,16 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {render} from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+import { Provider } from 'react-redux';
+import orderSlice from './Store/orderSlice';
+import { createStore } from '@reduxjs/toolkit';
+const store = createStore(orderSlice);
+render(
+    <Provider store={store}>
+      <App />
+    </Provider>,
   document.getElementById('root')
 );
 

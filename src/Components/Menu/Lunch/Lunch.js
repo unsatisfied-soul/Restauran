@@ -2,9 +2,9 @@ import axios from 'axios';
 import React, {  useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { actionCreators } from '../../../Store/actions';
-import './FastFood.css'
+import './Lunch.css'
 
-const Fastfood = () => {
+const Lunch = () => {
     const[menus,setMenus] = useState([])
     const [peopleInfo, setPeopleInfo] = useState([]);
     const dispatch = useDispatch()
@@ -13,12 +13,13 @@ const Fastfood = () => {
         .then(res=> setMenus(res.data))
         
     },[peopleInfo])
-    const resultFastFood = menus.filter(fastfoodMenu => fastfoodMenu.tag.includes('fastfood'))    
+    const resultSoftLunch = menus.filter(fastfoodMenu => fastfoodMenu.tag.includes('lunch'))
+    
    
       return (
-        <div className='fastfood-data grid gap-3 w-11/12 mx-auto py-8 text-left'>
+        <div className='fastfood-data grid gap-4 w-11/12 mx-auto py-8 text-left'>
           {
-               resultFastFood.map(menu=>
+               resultSoftLunch.map(menu=>
                 
                         <label key ={menu._id} className='fastfood-menu-item  gap-2 px-3 py-3'>
                             <input className='menu-checked-input' onChange={(e) => {
@@ -46,7 +47,7 @@ const Fastfood = () => {
                                     <img className='w-full' src={menu.foodImage} alt="" />
                                 </div>
                                 <div className="menu-desc px-2 text-center mt-2 flex  flex-col items-center py-2">
-                                    <h3 className='font-[Redressed] text-2xl font-bold mb-1'>{menu.title}</h3>
+                                    <h3 className='font-[Redressed] text-2xl font-bold mb-2'>{menu.title}</h3>
                                     <h4 className='menu-price text-white font-bold py-1 text-md '>${menu.price}</h4>
                                 </div>
                             </label>
@@ -55,4 +56,4 @@ const Fastfood = () => {
         </div>
     );
 };
-export default Fastfood;
+export default Lunch;

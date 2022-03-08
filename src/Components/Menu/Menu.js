@@ -4,7 +4,6 @@ import SlideMenu from './SlideMenu/SlideMenu';
 
 const Menu = () => {
     const{userToken}=useAuth()
-    console.log(userToken)
     return (
         <div className='bg-[#fee2b3] py-24'>
             <div className="heading mb-6">

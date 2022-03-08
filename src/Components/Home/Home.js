@@ -5,10 +5,12 @@ import Menu from '../Menu/Menu';
 import Login from '../RegistrationBase/Login/Login';
 import Registration from '../RegistrationBase/Registration/Registration';
 import Shef from '../ShefDetails/Shef';
+import UserOrder from '../UserOrder/UserOrder';
 const Home = () => {
     return (
         <div>
             <Banner />
+            <UserOrder />
             <Menu />
             <Shef />
             <AddMenuItem />

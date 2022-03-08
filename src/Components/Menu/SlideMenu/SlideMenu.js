@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
+import Dinner from '../Dinner/Dinner';
 import Fastfood from '../FastFood/Fastfood';
+import Lunch from '../Lunch/Lunch';
+import SoftDrinks from '../SoftDrinks/SoftDrinks';
 import './SlideMenu.css'
 
 const SlideMenu = () => {
@@ -70,17 +73,17 @@ const SlideMenu = () => {
         <div
           className={toggleState === 2 ? "content  active-content" : "content"}
         >
-          <h2 className='text-3xl text-green-600'>Shafe cooking this food🤗🤗</h2>
+          <SoftDrinks />
         </div>
         <div
           className={toggleState === 3 ? "content  active-content" : "content"}
         >
-           <Fastfood />
+           <Lunch />
         </div>
         <div
           className={toggleState === 4 ? "content  active-content" : "content"}
         >
-           <h2 className='text-3xl text-green-600'>Shafe cooking this food🤗🤗</h2>
+           <Dinner />
         </div>
       </div>
     </div>

@@ -1,0 +1,8 @@
+.order-toogle-close{
+    transform: translate(-80%,0px);
+    transition: .5s;
+}
+.order-toogle-open{
+    transform: translate(0px,0px);
+    transition: .5s;
+}

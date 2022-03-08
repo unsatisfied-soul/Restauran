@@ -3,10 +3,11 @@ import axios from 'axios';
 import { useForm } from 'react-hook-form';
 import Swal from 'sweetalert2';
 import './Login.css'
+import { useDispatch } from 'react-redux';
 
 const Login = () => {
     const { register, handleSubmit, formState: { errors }} = useForm();
-    
+    const dispatch = useDispatch()
     const[user,setUser]=useState({})
     const onSubmit = data => {
         axios.post('https://fast-eyrie-92146.herokuapp.com/login',data)
